@@ -1,0 +1,7 @@
+---
+
+dnsmasq:
+  domain: crptech.local
+  address: 0.0.0.0 # addr has a priority over iface
+  iface: enp0s8
+  table: /etc/crpt_hosts
