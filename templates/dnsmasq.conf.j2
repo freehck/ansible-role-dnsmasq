@@ -1,0 +1,12 @@
+local=/{{dnsmasq.domain}}/
+{% if dnsmasq.address is defined %}
+listen-address={{dnsmasq.address}}
+{% elif dnsmasq.iface is defined %}
+interface={{dnsmasq.iface}}
+{% else %}
+listen-address=0.0.0.0
+{% endif %}
+addn-hosts={{dnsmasq.table}}
+expand-hosts
+no-negcache
+#log-dhcp

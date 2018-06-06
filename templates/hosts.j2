@@ -1,0 +1,3 @@
+{% for record in dns.records %}
+{{ record.ip }}	 {{ record.names | join(' ') }}
+{% endfor %}
